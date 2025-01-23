@@ -6,6 +6,7 @@ const server = require('http').createServer(app);
 const JobRouter=require('./routes/Job.route')
 const UserRouter=require('./routes/User.route')
 const ProfileRouter=require('./routes/profile.route')
+const CompanyRouter=require('./routes/Company.route')
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(cors())
@@ -20,6 +21,7 @@ mongodb.connect("mongodb+srv://rishikeshreddyarra:Rick@cnr.hlvmzpd.mongodb.net/?
 app.use('/Jobs',JobRouter)
 app.use('/Profile',ProfileRouter);
 app.use('/User',UserRouter)
+app.use('/Company',CompanyRouter)
 app.get('/',(req,res)=>{
     res.send("server is running");
 })
