@@ -9,7 +9,7 @@ function App() {
       <Router>
       <Routes>
       
-        <Route path= "/" element={<JitsiMeet/>}/>
+        <Route path= "/JitsiMeet/:roomName" element={<JitsiMeet/>}/>
       
       </Routes>
       </Router>
